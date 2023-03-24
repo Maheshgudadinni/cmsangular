@@ -1,0 +1,5 @@
+.navbar-expand-lg {
+    flex-wrap: nowrap;
+    justify-content: center;
+    height: 52px;
+}

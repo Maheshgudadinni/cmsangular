@@ -1,0 +1,50 @@
+<div class="container-xl">
+    <mat-card style="margin-top:4%">
+        <mat-card-header style="display: flex; align-items: center; flex-direction: column;color:brown">
+            <h1>Update Customer</h1>
+        </mat-card-header>
+        <mat-card-content class="form-content">
+            <form [formGroup]="updateCustomerForm" style="display: flex; flex-direction: column;">
+                <!-- <mat-form-field>
+                    <mat-label>Customer Id</mat-label>
+                    <input matInput formControlName="cusid">
+                </mat-form-field> -->
+                <mat-form-field>
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="firstName">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastName">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Contact No</mat-label>
+                    <input matInput formControlName="contactNo">
+                </mat-form-field>
+                <!-- <mat-form-field>
+                    <mat-label>Date of Association</mat-label>
+                    <input matInput formControlName="dateOfAssociation">
+                </mat-form-field> -->
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Date of Association</mat-label>
+                    <input formControlName="dateOfAssociation" matInput [matDatepicker]="picker">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker">
+                      <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                <!-- <div>
+                    <mat-radio-group formControlName="gender" aria-label="Gender">
+                        <mat-radio-button value="male">Male</mat-radio-button>
+                        <mat-radio-button value="female">Female</mat-radio-button>
+                    </mat-radio-group>
+                </div> -->
+                <div class="buttons-div">
+                    <button mat-raised-button color="primary" (click)="updateCustomer()">Update Customer</button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
+
